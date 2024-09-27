@@ -1,0 +1,105 @@
+body {
+    background-color: #343a40; /* Dark mode background */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border: none;
+    height: 95%;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    flex-grow: 1; /* Allows the body to grow and fill available space */
+}
+
+.card-title, .card-text {
+    margin-bottom: auto; /* Pushes the button to the bottom */
+}
+
+.card-dark {
+    background-color: #495057; /* Dark card background */
+    color: #f8f9fa; /* Light text color */
+}
+
+.card-light {
+    background-color: #f8f9fa; /* Light card background */
+    color: #343a40; /* Dark text color */
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.pagination button {
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s; /* Transition for pagination buttons */
+}
+
+.pagination button:hover {
+    background-color: #5a6268; /* Darker on hover */
+    color: #fff; /* Change text color */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button styles */
+.btn {
+    transition: background-color 0.3s ease, transform 0.2s; /* Transition for buttons */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Loading spinner animation */
+.spinner-border {
+    animation: spin 0.5s linear infinite; /* Spinner animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Dark mode styles */
+.bg-dark {
+    background-color: #2F2F2F !important; /* Dark background for navbar/footer */
+}
+
+.text-light {
+    color: #ffffff !important; /* Light text for dark mode */
+}
+
+/* Light mode styles */
+.bg-light {
+    background-color: #ffffff !important; /* Light background for navbar/footer */
+}
+
+.text-dark {
+    color: #000000 !important; /* Dark text for light mode */
+}

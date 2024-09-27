@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A news app to keep you updated with the latest headlines.">
+    <title>News App</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg" style="background-color: #2F2F2F;">
+        <a class="navbar-brand nav-link text-light" href="index.html">News App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="index.html" id="homeLink">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" id="sportsLink">Sports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" id="weatherLink">Weather</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search news" aria-label="Search">
+                <button id="searchBtn" class="btn btn-light my-2 my-sm-0" type="button">Search</button>
+            </form>
+            <button id="toggleBtn" class="btn btn-secondary ml-3">
+                <i class="fas fa-sun" id="toggleIcon"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="text-center my-4 nav-link">Latest News</h2>
+        <div id="loading" class="text-center" style="display: block; color:aqua;">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div id="errorMessage" class="text-danger text-center" style="display: none;"></div>
+        <div id="news" class="row"></div>
+        <div class="pagination justify-content-center my-4">
+            <button id="prevBtn" class="btn btn-secondary">Previous</button>
+            <button id="nextBtn" class="btn btn-secondary">Next</button>
+        </div>
+    </div>
+    <footer class="text-light text-center py-3" style="background-color: #2F2F2F;">
+        <p>&copy; 2024 News App. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
